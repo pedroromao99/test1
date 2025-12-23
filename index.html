@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CyberNexus — Planos e Preços Claros</title>
+  <meta name="description" content="CyberNexus — preçário justo para micro, pequenas e médias empresas. Modelos por empresa e por equipamento com descontos por volume." />
+  <meta name="theme-color" content="#0b1220" />
+
+  <style>
+    :root{
+      --bg:#0b1220; --bg-light:#0f172a; --primary:#1e90ff; --accent:#22d3ee;
+      --text:#e6eef7; --muted:#a8b3c7; --card:#0d1931; --border:#1f2b46; --success:#34d399;
+      --maxw:1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+    a{color:var(--accent);text-decoration:none}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+    header{position:sticky;top:0;z-index:60;background:linear-gradient(0deg, rgba(11,18,32,0.75), rgba(11,18,32,0.95));backdrop-filter:saturate(120%) blur(6px);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{width:44px;height:44px;border-radius:8px;object-fit:cover}
+    .brand .name{font-weight:800;letter-spacing:0.6px}
+    .brand .tag{font-size:12px;color:var(--muted)}
+    .menu{display:flex;gap:14px;align-items:center}
+    .menu a{padding:8px 12px;border-radius:8px;color:var(--text);font-weight:600}
+    .cta{background:linear-gradient(90deg,var(--accent),var(--primary));color:#001;font-weight:800;padding:10px 14px;border-radius:10px;box-shadow:0 6px 18px rgba(34,211,238,0.06)}
+
+    main{padding-bottom:40px}
+
+    .hero{padding:36px 0;border-bottom:1px solid var(--border)}
+    .headline{font-size:28px;margin:0 0 8px}
+    .sub{color:var(--muted);margin:0 0 18px}
+
+    section{padding:36px 0;border-bottom:1px solid var(--border)}
+    .sec-title{font-size:22px;margin:0 0 8px}
+    .sec-sub{color:var(--muted);margin:0 0 16px}
+
+    .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .plan{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px}
+    .plan h3{margin:0 0 6px}
+    .plan .meta{color:var(--muted);font-size:13px;margin-bottom:10px}
+    .price-big{font-size:20px;font-weight:800;margin:6px 0 12px;background:linear-gradient(90deg,var(--accent),var(--primary));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .plan ul{margin:0 0 12px;padding-left:18px;color:var(--muted)}
+    .badge{display:inline-block;background:rgba(52,211,153,0.12);border:1px solid rgba(52,211,153,0.4);color:var(--success);padding:4px 8px;border-radius:999px;font-size:12px;margin-left:8px}
+
+    .calc{background:linear-gradient(180deg, rgba(13,25,49,0.85), rgba(13,25,49,1));border:1px solid var(--border);border-radius:12px;padding:16px;margin-top:18px}
+    .calc label{display:block;color:var(--muted);font-size:13px;margin-bottom:6px}
+    .calc input[type="number"]{width:120px;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
+    .calc select{padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
+    .calc .result{margin-top:12px;font-weight:800;font-size:18px}
+    .examples{margin-top:12px;color:var(--muted);font-size:13px}
+
+    /* Bottom proposal strip */
+    .proposal-strip{margin-top:28px;background:linear-gradient(90deg, rgba(34,211,238,0.06), rgba(30,144,255,0.04));border:1px solid rgba(255,255,255,0.03);padding:18px;border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .proposal-text{font-size:16px}
+    .proposal-actions{display:flex;gap:10px;align-items:center}
+
+    footer{padding:20px 0;color:var(--muted)}
+    .foot{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+
+    @media (max-width:980px){
+      .pricing-grid{grid-template-columns:1fr}
+      .menu{display:none}
+      .proposal-strip{flex-direction:column;align-items:stretch;text-align:center}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Menu principal">
+      <div class="brand">
+        <img src="logo.png" alt="Logotipo CyberNexus" width="44" height="44" loading="lazy" />
+        <div>
+          <div class="name">CYBERNEXUS</div>
+          <div class="tag">Auditoria • Patching • Compliance</div>
+        </div>
+      </div>
+
+      <nav class="menu" aria-label="Links principais">
+        <a href="#servicos">Serviços</a>
+        <a href="#precos">Planos</a>
+        <a class="cta" href="contacto1.1.html">Agendar auditoria</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title" class="headline">Preçário justo e transparente para Micro, Pequenas e Médias Empresas</h1>
+      <p class="sub">Modelos pensados para diferentes tamanhos: tarifa fixa para microempresas, preço por equipamento com descontos por volume para pequenas e médias empresas.</p>
+
+      <div style="margin-top:12px">
+        <a class="cta" href="contacto1.1.html" style="margin-right:10px">Agendar auditoria</a>
+        <a class="cta" href="#precos" style="background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--text)">Ver planos</a>
+      </div>
+    </section>
+
+    <section id="precos" aria-labelledby="precos-title">
+      <h2 id="precos-title" class="sec-title">Planos e Preços</h2>
+      <p class="sec-sub">Escolha o modelo que melhor se adapta à sua empresa. Todos os planos incluem suporte remoto e relatório inicial.</p>
+
+      <div class="pricing-grid" role="list">
+        <!-- Micro -->
+        <div class="plan" role="listitem" aria-labelledby="micro-title">
+          <h3 id="micro-title">Micro</h3>
+          <div class="meta">Ideal para microempresas com até 5 equipamentos</div>
+          <div class="price-big">40 € / mês <span style="font-size:12px;color:var(--muted)">por empresa (até 5 eq.)</span></div>
+          <ul>
+            <li>Auditoria inicial</li>
+            <li>Patching crítico</li>
+            <li>Relatório simples</li>
+            <li>Suporte 8/5</li>
+          </ul>
+          <div class="examples"><strong>Exemplo:</strong> 1–5 equipamentos = 40 € / mês</div>
+        </div>
+
+        <!-- Small -->
+        <div class="plan" role="listitem" aria-labelledby="small-title">
+          <h3 id="small-title">Small <span class="badge">Mais escolhido</span></h3>
+          <div class="meta">Pequenas empresas (6–25 equipamentos) — preço por equipamento</div>
+          <div class="price-big">18 € / equipamento / mês <span style="font-size:12px;color:var(--muted)">(descontos por volume)</span></div>
+          <ul>
+            <li>Auditoria completa</li>
+            <li>Patching contínuo</li>
+            <li>Relatórios mensais</li>
+            <li>Alertas de incidentes</li>
+          </ul>
+          <div class="examples">
+            <strong>Exemplos:</strong> 10 eq. = 180 € / mês; 12 eq. = 216 € / mês (descontos negociáveis a partir do 11.º equipamento).
+          </div>
+        </div>
+
+        <!-- Medium -->
+        <div class="plan" role="listitem" aria-labelledby="medium-title">
+          <h3 id="medium-title">Medium</h3>
+          <div class="meta">Empresas médias (26–200 equipamentos)</div>
+          <div class="price-big">14 € / equipamento / mês <span style="font-size:12px;color:var(--muted)">+ onboarding único</span></div>
+          <ul>
+            <li>Compliance (GDPR/NIS2) opcional</li>
+            <li>Consultoria estratégica</li>
+            <li>SLA prioritário</li>
+            <li>Formação básica</li>
+          </ul>
+          <div class="examples"><strong>Exemplo:</strong> 50 eq. = 700 € / mês + onboarding 250 € (uma vez)</div>
+        </div>
+      </div>
+
+      <!-- Calculator -->
+      <div class="calc" aria-labelledby="calc-title">
+        <h3 id="calc-title" style="margin:0 0 8px">Calculador de preço</h3>
+        <label for="num-eq">Número de equipamentos</label>
+        <input id="num-eq" type="number" min="1" value="5" aria-label="Número de equipamentos" />
+
+        <label for="model" style="margin-top:10px">Modelo de preço</label>
+        <select id="model" aria-label="Modelo de preço">
+          <option value="auto">Escolher automaticamente pelo número de equipamentos</option>
+          <option value="micro">Micro — 40 € / mês por empresa (até 5 eq.)</option>
+          <option value="small">Small — 18 € / equipamento / mês</option>
+          <option value="medium">Medium — 14 € / equipamento / mês + onboarding 250 €</option>
+        </select>
+
+        <div style="margin-top:12px">
+          <button id="calc-btn" style="padding:8px 12px;border-radius:8px;border:0;background:linear-gradient(90deg,var(--accent),var(--primary));color:#001;font-weight:800">Calcular</button>
+        </div>
+
+        <div class="result" id="calc-result" aria-live="polite" style="display:none"></div>
+
+        <div class="examples" style="margin-top:8px">
+          <strong>Notas:</strong> Micro aplica-se automaticamente até 5 equipamentos. Small é o modelo por equipamento com descontos negociáveis a partir do 11.º equipamento. Medium inclui onboarding único para projetos maiores.
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" aria-labelledby="servicos-title">
+      <h2 id="servicos-title" class="sec-title">O que está incluído</h2>
+      <p class="sec-sub">Resumo rápido do que recebe em cada plano.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+        <div style="background:var(--card);padding:12px;border-radius:10px;border:1px solid var(--border)"><strong>Auditoria</strong><div style="color:var(--muted);margin-top:6px">Relatório inicial e plano de ação.</div></div>
+        <div style="background:var(--card);padding:12px;border-radius:10px;border:1px solid var(--border)"><strong>Patching</strong><div style="color:var(--muted);margin-top:6px">Automatizado com janelas de manutenção configuráveis.</div></div>
+        <div style="background:var(--card);padding:12px;border-radius:10px;border:1px solid var(--border)"><strong>Compliance</strong><div style="color:var(--muted);margin-top:6px">Suporte para GDPR e NIS2 (Medium ou add‑on).</div></div>
+      </div>
+    </section>
+
+    <!-- Proposal strip moved to bottom of main content for higher visibility -->
+    <div class="proposal-strip container" role="region" aria-label="Solicitar proposta">
+      <div class="proposal-text">
+        <strong>Pronto para avançar?</strong>
+        <div style="color:var(--muted);margin-top:6px">Solicite uma proposta personalizada ou agende uma auditoria. Resposta em 24–48h.</div>
+      </div>
+      <div class="proposal-actions">
+        <a class="cta" href="contacto1.1.html">Solicitar proposta</a>
+        <a class="cta" href="contacto1.1.html" style="background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--text)">Agendar auditoria</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container">
+    <div class="foot">
+      <div style="display:flex;gap:10px;align-items:center">
+        <img src="logo.png" alt="Logotipo CyberNexus" width="40" height="40" loading="lazy" />
+        <div>
+          <div class="name">CYBERNEXUS</div>
+          <small>© 2025 CyberNexus. Todos os direitos reservados.</small>
+        </div>
+      </div>
+      <div style="text-align:right;color:var(--muted)">
+        <div>Privacidade • Termos • Segurança</div>
+        <div style="margin-top:6px">GDPR Compliant • NIS2 Ready • SLA 24/7</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const numEqEl = document.getElementById('num-eq');
+      const modelEl = document.getElementById('model');
+      const btn = document.getElementById('calc-btn');
+      const resultEl = document.getElementById('calc-result');
+
+      function computePrice(numEq, modelChoice){
+        numEq = Math.max(1, Math.floor(numEq || 1));
+        const microFlat = 40;
+        const smallPer = 18;
+        const mediumPer = 14;
+        const mediumOnboarding = 250;
+
+        let smallEffective = smallPer;
+        if(numEq >= 11 && numEq <= 25) smallEffective = Math.round(smallPer * 0.9 * 100) / 100;
+        if(numEq >= 26) smallEffective = smallPer;
+
+        if(modelChoice === 'auto'){
+          if(numEq <= 5) modelChoice = 'micro';
+          else if(numEq <= 25) modelChoice = 'small';
+          else modelChoice = 'medium';
+        }
+
+        let breakdown = {model: modelChoice, monthly:0, onboarding:0, note:''};
+
+        if(modelChoice === 'micro'){
+          if(numEq > 5){
+            breakdown.monthly = microFlat;
+            breakdown.note = 'Micro aplica-se até 5 equipamentos. Para mais equipamentos, considere Small ou Medium.';
+          } else {
+            breakdown.monthly = microFlat;
+          }
+        } else if(modelChoice === 'small'){
+          if(numEq >= 26){
+            breakdown.monthly = Math.round(mediumPer * numEq * 100) / 100;
+            breakdown.note = 'Para 26+ equipamentos recomendamos o plano Medium (preço mostrado como referência).';
+          } else {
+            breakdown.monthly = Math.round(smallEffective * numEq * 100) / 100;
+            if(numEq >= 11 && numEq <= 25) breakdown.note = 'Desconto de 10% aplicado a partir do 11.º equipamento.';
+          }
+        } else if(modelChoice === 'medium'){
+          breakdown.monthly = Math.round(mediumPer * numEq * 100) / 100;
+          breakdown.onboarding = mediumOnboarding;
+        }
+
+        return breakdown;
+      }
+
+      function render(){
+        const num = parseInt(numEqEl.value, 10) || 1;
+        const model = modelEl.value;
+        const res = computePrice(num, model);
+        let html = '';
+        html += `Modelo: <span style="color:var(--accent);font-weight:700">${res.model.toUpperCase()}</span><br/>`;
+        html += `Custo mensal: <span style="color:var(--accent);font-weight:800">${res.monthly.toLocaleString('pt-PT', {style:'currency', currency:'EUR'})}</span><br/>`;
+        if(res.onboarding && res.onboarding > 0){
+          html += `Onboarding (uma vez): <span style="color:var(--muted);font-weight:700">${res.onboarding.toLocaleString('pt-PT', {style:'currency', currency:'EUR'})}</span><br/>`;
+        }
+        if(res.note) html += `<div style="margin-top:8px;color:var(--muted);font-size:13px">${res.note}</div>`;
+        html += `<div style="margin-top:8px;color:var(--muted);font-size:13px">Exemplo de cálculo: ${num} equipamento(s)</div>`;
+        resultEl.innerHTML = html;
+        resultEl.style.display = 'block';
+      }
+
+      btn.addEventListener('click', render);
+      numEqEl.addEventListener('keydown', function(e){
+        if(e.key === 'Enter'){ e.preventDefault(); render(); }
+      });
+      render();
+    })();
+  </script>
+</body>
+</html>
